@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BookingService, MainType } from '../../services/booking-data.service';
+import { BookingDataService, MainType } from '../../services/booking-data.service';
 
 @Component({
   selector: 'app-flight-details',
@@ -30,11 +30,11 @@ export class FlightDetailsComponent implements OnInit {
   scheduledArrival!: string;
   scheduledDeparture!: string;
 
-  constructor(private route: ActivatedRoute, private bookingService: BookingService) { }
+  constructor(private route: ActivatedRoute, private bookingDataService: BookingDataService) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(async (params) => {
-      this.bookingData = await this.bookingService.findBooking(params.bookingCode, params.familyName);
+      this.bookingData = await this.bookingDataService.findBooking(params.bookingCode, params.familyName);
 
       this.passengerName = this.bookingData.passengers.firstName;
       this.passengerLastName = this.bookingData.passengers.lastName;

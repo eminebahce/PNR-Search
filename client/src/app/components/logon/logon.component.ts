@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { BookingService } from '../../services/booking-data.service';
+import { BookingDataService } from '../../services/booking-data.service';
 
 @Component({
   selector: 'app-logon',
@@ -13,7 +13,7 @@ export class LogonComponent implements OnInit {
   logonForm!: FormGroup;
   flight = { bookingCode: '', familyName: '' };
 
-  constructor(private bookingService: BookingService, private router: Router) { }
+  constructor(private bookingDataService: BookingDataService, private router: Router) { }
 
   ngOnInit(): void {
     this.logonForm = new FormGroup({
@@ -31,7 +31,7 @@ export class LogonComponent implements OnInit {
   }
 
   onSubmit(flight = { bookingCode: '', familyName: '' }) {
-    this.bookingService.findPassenger(flight.bookingCode, flight.familyName)
+    this.bookingDataService.findPassenger(flight.bookingCode, flight.familyName)
       .then(result => {
         if (result == undefined) {
           localStorage.setItem("loggedIn", "false");

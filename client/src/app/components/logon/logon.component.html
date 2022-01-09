@@ -3,7 +3,7 @@
         <app-logon-header title="retrieve your booking"
             text="You can find your booking by filling out your family name and the booking code in your booking confirmation.">
         </app-logon-header>
-            <app-logon-form [logonForm]="logonForm" [invalidLogon]="invalidLogon" (formSubmit)="onSubmit($event)"
-                (removeInvalidLogon)="removeInvalidLogon()"></app-logon-form>
+        <app-logon-form [logonForm]="logonForm" [invalidLogon]="invalidLogon" (formSubmit)="onSubmit($event)" (removeInvalidLogon)="removeInvalidLogon()">
+        </app-logon-form>
     </div>
 </div>

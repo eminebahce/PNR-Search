@@ -145,7 +145,7 @@ export interface Passenger {
 @Injectable({
   providedIn: 'root'
 })
-export class BookingService {
+export class BookingDataService {
 
   private findBookingQuery: QueryRef<{ mainData: MainType }, { code: string, family: string }>;
   private findPassengerQuery: QueryRef<{ mainData: Passenger }, { code: string, family: string }>;
