@@ -16,6 +16,8 @@ import { LogonFormGroupComponent } from './components/logon-form-group/logon-for
 import { FlightHeaderComponent } from './components/flight-header/flight-header.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FlightBodyComponent } from './components/flight-body/flight-body.component';
+import { FlightTimelineComponent } from './components/flight-timeline/flight-timeline.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LogonFormComponent,
     LogonFormGroupComponent,
     FlightHeaderComponent,
-    LogoutComponent
+    LogoutComponent,
+    FlightBodyComponent,
+    FlightTimelineComponent
   ],
   imports: [
     BrowserModule,

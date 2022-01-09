@@ -3,5 +3,16 @@
         <app-flight-header [passengerName]="passengerName" [passengerLastName]="passengerLastName"
             [passengerTitle]="passengerTitle" [bookingCode]="bookingCode"></app-flight-header>
         <hr class="solid" />
+        <app-flight-body [flightType]="flightType" [originCityName]="originCityName"
+            [destinationCityName]="destinationCityName" [flightCode]="flightCode" [originIATACode]="originIATACode"
+            [destinationIATACode]="destinationIATACode" [scheduledDepartureDate]="scheduledDepartureDate">
+        </app-flight-body>
+        <hr class="solid" />
+        <button class="view-more-details" (click)="showMore()">View more details</button>
+        <div *ngIf="showViewMore">
+            <app-flight-timeline [flightDuration]="flightDuration" [checkInStartTime]="checkInStartTime"
+                [checkInEndTime]="checkInEndTime" [scheduledArrival]="scheduledArrival"
+                [scheduledDeparture]="scheduledDeparture"></app-flight-timeline>
+        </div>
     </div>
 </div>

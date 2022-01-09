@@ -1,0 +1,25 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  li {
+    list-style: none;
+    color: #01245c;
+  }
+}
+
+.flight-info-text {
+  font-weight: 600;
+}
+
+.flight-route-text {
+  margin-top: 20px;
+  color: #01245c;
+}
+
+.flight-date-short {
+  li {
+    flex: content;
+  }
+}

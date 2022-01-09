@@ -1,0 +1,24 @@
+<div class="container-timeline">
+    <ul class="sessions">
+        <li>
+            <div *ngIf="flightDuration" class="time">{{flightDuration}} hour</div>
+            <p>Flight duration</p>
+        </li>
+        <li>
+            <div *ngIf="checkInStartTime" class="time">{{checkInStartTime | date: "short":"UTC" }}</div>
+            <p>Check - in start time</p>
+        </li>
+        <li>
+            <div *ngIf="checkInEndTime" class="time">{{checkInEndTime | date: "short":"UTC" }}</div>
+            <p>Check - in end time</p>
+        </li>
+        <li>
+            <div *ngIf="scheduledArrival" class="time">{{scheduledArrival | date: "short":"UTC" }}</div>
+            <p>Scheduled arrival</p>
+        </li>
+        <li>
+            <div *ngIf="scheduledDeparture" class="time">{{scheduledDeparture | date: "short":"UTC" }}</div>
+            <p>Schedule departure</p>
+        </li>
+    </ul>
+</div>

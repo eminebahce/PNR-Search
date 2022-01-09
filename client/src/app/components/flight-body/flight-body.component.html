@@ -1,0 +1,34 @@
+<div>
+    <p *ngIf="flightType" class="flight-route-text" [ngStyle]="{ color: '#00A1E4' }">
+        {{flightType}}
+        <span>
+            <fa-icon [ngStyle]="{ color: '#00A1E4' }" [icon]="faPlane"> </fa-icon>
+        </span>
+    </p>
+    <ul class="flight-info-text">
+        <li>Flight</li>
+        <li *ngIf="originCityName">{{originCityName}}</li>
+        <li *ngIf="destinationCityName">{{destinationCityName}}</li>
+    </ul>
+    <ul>
+        <li *ngIf="flightCode">
+            {{flightCode}}
+        </li>
+        <li *ngIf="originIATACode" [ngStyle]="{ color: '#00A1E4' }">
+            {{originIATACode}}</li>
+        <li>
+            <fa-icon [ngStyle]="{ color: '#00A1E4' }" [icon]="faPlaneDeparture">
+            </fa-icon>
+        </li>
+        <li *ngIf="destinationIATACode" [ngStyle]="{ 'margin-right': '40px', color: '#00A1E4' }">
+            {{destinationIATACode}}</li>
+    </ul>
+    <ul class="flight-info-text">
+        <li>Departure</li>
+    </ul>
+    <ul class="flight-date-short">
+        <li *ngIf="scheduledDepartureDate">
+            {{scheduledDepartureDate | date: "short":"UTC" }}</li>
+        <li>Operated by KLM Royal Dutch Airlines</li>
+    </ul>
+</div>
