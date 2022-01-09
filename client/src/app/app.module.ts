@@ -13,6 +13,10 @@ import { LogonHeaderComponent } from './components/logon-header/logon-header.com
 import { AuthGuardService } from './services/auth-guard.service';
 import { LogonFormComponent } from './components/logon-form/logon-form.component';
 import { LogonFormGroupComponent } from './components/logon-form-group/logon-form-group.component';
+import { FlightHeaderComponent } from './components/flight-header/flight-header.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -22,14 +26,17 @@ import { LogonFormGroupComponent } from './components/logon-form-group/logon-for
     NavbarComponent,
     LogonHeaderComponent,
     LogonFormComponent,
-    LogonFormGroupComponent
+    LogonFormGroupComponent,
+    FlightHeaderComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]

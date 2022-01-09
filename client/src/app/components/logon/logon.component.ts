@@ -39,7 +39,7 @@ export class LogonComponent implements OnInit {
         } else {
           localStorage.setItem("loggedIn", "true");
           this.removeInvalidLogon();
-          this.router.navigate(['/flight-detail'], { queryParams: { bookingCode: flight.bookingCode, familyName: flight.familyName } });
+          this.router.navigate(['/flight-details'], { queryParams: { bookingCode: flight.bookingCode, familyName: flight.familyName } });
         }
       });
   }
