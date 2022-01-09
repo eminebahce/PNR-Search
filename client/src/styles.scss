@@ -9,3 +9,38 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 380px;
+  padding: 20px;
+  margin: 60px 0px;
+
+  @media (min-width: 768px) {
+    width: 380px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 60px;
+  }
+
+  @media (min-width: 992px) {
+    width: 380px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 60px;
+  }
+}
+
+.divider {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  color: #01245c;
+}

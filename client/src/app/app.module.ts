@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { LogonComponent } from './components/logon/logon.component';
 import { FlightDetailsComponent } from './components/flight-details/flight-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LogonHeaderComponent } from './components/logon-header/logon-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogonComponent,
     FlightDetailsComponent,
-    NavbarComponent
+    NavbarComponent,
+    LogonHeaderComponent
   ],
   imports: [
     BrowserModule,
