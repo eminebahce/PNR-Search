@@ -7,12 +7,14 @@ import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LogonComponent } from './components/logon/logon.component';
 import { FlightDetailsComponent } from './components/flight-details/flight-details.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogonComponent,
-    FlightDetailsComponent
+    FlightDetailsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
