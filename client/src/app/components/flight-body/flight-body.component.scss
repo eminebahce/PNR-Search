@@ -5,7 +5,6 @@ ul {
 
   li {
     list-style: none;
-    color: #01245c;
   }
 }
 
@@ -15,11 +14,37 @@ ul {
 
 .flight-route-text {
   margin-top: 20px;
-  color: #01245c;
+  color: #00a1e4;
 }
 
 .flight-date-short {
   li {
     flex: content;
+  }
+}
+
+.flight-body-text {
+  color: #00a1e4;
+}
+
+.flight-destination {
+  margin-right: 20px;
+}
+
+.flight-info {
+  margin-right: 220px;
+  cursor: pointer;
+}
+
+.flight-more-info {
+  display: inline;
+
+  p {
+    padding: 5px 0;
+    color: #01245c;
+  }
+
+  span {
+    color: #00a1e4;
   }
 }

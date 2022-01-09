@@ -9,3 +9,34 @@
   color: #00a1e4;
   cursor: pointer;
 }
+
+.logout-icon {
+  color: #00a1e4;
+}
+
+.hovertext {
+  position: relative;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 100px;
+  color: #00a1e4;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 60%;
+  left: -50px;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}

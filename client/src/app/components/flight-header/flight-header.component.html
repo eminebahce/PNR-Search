@@ -3,6 +3,8 @@
     <div class="logo-wrapper">
         <img src="../../../assets/klm_logo.png" class="logo" />
     </div>
-    <p *ngIf="passengerTitle" class="passenger-text">{{passengerTitle}}. {{passengerName}} {{passengerLastName}}</p>
-    <span *ngIf="bookingCode" class="passenger-text">{{bookingCode}}</span>
+    <div class="passenger-info-wraper">
+        <p *ngIf="passengerTitle" class="passenger-text">{{passengerTitle}}. {{passengerName}} {{passengerLastName}}</p>
+        <span *ngIf="bookingCode" class="passenger-text">{{bookingCode}}</span>
+    </div>
 </div>

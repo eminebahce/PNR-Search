@@ -4,16 +4,16 @@
     <div *ngIf="logonForm.get(name)?.invalid &&
     (logonForm.get(name)?.dirty ||
       logonForm.get(name)?.touched)" class="alert">
-        <div *ngIf="logonForm.get(name)?.errors?.['required']">
+        <div  class="validation-texts" *ngIf="logonForm.get(name)?.errors?.['required']">
             {{requiredMessage}}
         </div>
-        <div *ngIf="logonForm.get(name)?.errors?.['minlength']">
+        <div class="validation-texts"  *ngIf="logonForm.get(name)?.errors?.['minlength']">
             {{minMessage}}
         </div>
-        <div *ngIf="logonForm.get(name)?.errors?.['maxlength']">
+        <div  class="validation-texts" *ngIf="logonForm.get(name)?.errors?.['maxlength']">
             {{maxMessage}}
         </div>
-        <div *ngIf="logonForm.get(name)?.errors?.['pattern']">
+        <div class="validation-texts"  *ngIf="logonForm.get(name)?.errors?.['pattern']">
             {{patternMessage}}
         </div>
     </div>

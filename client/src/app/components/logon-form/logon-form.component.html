@@ -11,7 +11,7 @@
             maxMessage="Family Name must be equal or less than 30 characters long"
             patternMessage="Family Name can only include alphabetic characters"></app-logon-form-group>
         <div>
-            <h3 *ngIf="invalidLogon">{{invalidLogon}}</h3>
+            <h3 class="invalid-person-validation-text" *ngIf="invalidLogon">{{invalidLogon}}</h3>
         </div>
         <button type="submit" [disabled]="!logonForm.valid">
             Retrieve booking

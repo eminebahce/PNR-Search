@@ -1,34 +1,47 @@
 <div>
-    <p *ngIf="flightType" class="flight-route-text" [ngStyle]="{ color: '#00A1E4' }">
+    <p *ngIf="flightType" class="flight-route-text">
         {{flightType}}
         <span>
-            <fa-icon [ngStyle]="{ color: '#00A1E4' }" [icon]="faPlane"> </fa-icon>
+            <fa-icon class="flight-body-text" [icon]="faPlane"> </fa-icon>
         </span>
     </p>
     <ul class="flight-info-text">
         <li>Flight</li>
         <li *ngIf="originCityName">{{originCityName}}</li>
-        <li *ngIf="destinationCityName">{{destinationCityName}}</li>
+        <li class="flight-destination" *ngIf="destinationCityName">{{destinationCityName}}</li>
     </ul>
     <ul>
-        <li *ngIf="flightCode">
+        <li class="flight-body-text" *ngIf="flightCode">
             {{flightCode}}
         </li>
-        <li *ngIf="originIATACode" [ngStyle]="{ color: '#00A1E4' }">
+        <li  class="flight-body-text" *ngIf="originIATACode">
             {{originIATACode}}</li>
         <li>
-            <fa-icon [ngStyle]="{ color: '#00A1E4' }" [icon]="faPlaneDeparture">
+            <fa-icon class="flight-body-text"  [icon]="faPlaneDeparture">
             </fa-icon>
         </li>
-        <li *ngIf="destinationIATACode" [ngStyle]="{ 'margin-right': '40px', color: '#00A1E4' }">
+        <li *ngIf="destinationIATACode" class="flight-body-text flight-destination">
             {{destinationIATACode}}</li>
     </ul>
     <ul class="flight-info-text">
         <li>Departure</li>
+        <fa-icon title="Click for more info" class="flight-body-text flight-info" [icon]="faInfoCircle" (click) = "showModalToggle()">
+        </fa-icon>
+        <app-modal [show]="showModal" title="View more details" (closed)="showModal =!showModal">
+          <div class="flight-more-info">
+                <p>Departure country: <span>{{originCountry}}</span></p>
+                <p>Depature airport: <span>{{originAirport}}</span></p>
+                <p>Destination country: <span>{{destinationCountry}}</span></p>
+                <p>Destination airport: <span>{{destinationAirport}}</span></p>
+                <p>Flight status: <span>{{flightStatus}}</span></p>
+                <p>Number of stops: <span>{{numberOfStops}}</span></p>
+                <p>Seat info: <span>{{seatNumber}} {{cabinType}}</span></p>
+                <p>Plane modal: <span>{{planeType}}</span></p>
+          </div>
+        </app-modal>
     </ul>
     <ul class="flight-date-short">
-        <li *ngIf="scheduledDepartureDate">
+        <li class="flight-body-text" *ngIf="scheduledDepartureDate">
             {{scheduledDepartureDate | date: "short":"UTC" }}</li>
-        <li>Operated by KLM Royal Dutch Airlines</li>
     </ul>
 </div>

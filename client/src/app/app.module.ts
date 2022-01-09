@@ -18,6 +18,8 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlightBodyComponent } from './components/flight-body/flight-body.component';
 import { FlightTimelineComponent } from './components/flight-timeline/flight-timeline.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { BackdropComponent } from './components/backdrop/backdrop.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { FlightTimelineComponent } from './components/flight-timeline/flight-tim
     FlightHeaderComponent,
     LogoutComponent,
     FlightBodyComponent,
-    FlightTimelineComponent
+    FlightTimelineComponent,
+    ModalComponent,
+    BackdropComponent
   ],
   imports: [
     BrowserModule,

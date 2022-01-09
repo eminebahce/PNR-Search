@@ -10,6 +10,12 @@
   margin-bottom: 40px;
 }
 
+.passenger-info-wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .passenger-text {
   font-size: 20px;
   font-weight: 600;
