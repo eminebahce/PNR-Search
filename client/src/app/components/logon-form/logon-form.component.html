@@ -1,0 +1,20 @@
+<div class="logon-form">
+    <form [formGroup]="logonForm" (ngSubmit)="onFormSubmit()">
+        <app-logon-form-group name="bookingCode" label="Booking code" [logonForm]="logonForm"
+            patternMatch="[a-zA-Z2-9]*" (onTypeInput)="onBookingCode($event)" requiredMessage="Booking code is required"
+            minMessage="Booking code must be at least 4 characters long"
+            maxMessage="Booking code must be equal or less than 6 characters long"
+            patternMessage="Booking code cannot include numbers 1 - 0"></app-logon-form-group>
+        <app-logon-form-group name="familyName" label="Family name" [logonForm]="logonForm" patternMatch="[a-zA-Z ]*"
+            (onTypeInput)="onFamilyName($event)" requiredMessage="Family Name is required"
+            minMessage="Family Name must be at least 2 characters long"
+            maxMessage="Family Name must be equal or less than 30 characters long"
+            patternMessage="Family Name can only include alphabetic characters"></app-logon-form-group>
+        <div>
+            <h3 *ngIf="invalidLogon">{{invalidLogon}}</h3>
+        </div>
+        <button type="submit" [disabled]="!logonForm.valid">
+            Retrieve booking
+        </button>
+    </form>
+</div>
